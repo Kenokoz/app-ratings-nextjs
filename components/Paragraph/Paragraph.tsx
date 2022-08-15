@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import React, { FC } from 'react';
+import clsx from 'clsx';
 import styles from './Paragraph.module.css';
 import { ParagraphProps } from './Paragraph.props';
 

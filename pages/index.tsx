@@ -1,7 +1,10 @@
 import type { NextPage } from 'next';
-import { Button, Htag, Paragraph, Tag } from '../components';
+import { useState } from 'react';
+import { Button, Htag, Paragraph, Tag, Rating } from '../components';
 
 const Home: NextPage = () => {
+	const [rating, setRating] = useState(4);
+
 	return (
 		<>
 			<Htag tag="h1">Hello</Htag>
@@ -17,6 +20,7 @@ const Home: NextPage = () => {
 			<Tag size="small" color="green">
 				Small
 			</Tag>
+			<Rating rating={rating} setRating={setRating} isEditable />
 		</>
 	);
 };
