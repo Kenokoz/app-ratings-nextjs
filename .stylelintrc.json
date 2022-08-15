@@ -1,16 +1,9 @@
 {
-	"extends": [
-		"stylelint-config-standard",
-		"stylelint-config-rational-order"
-	],
-	"plugins": [
-		"stylelint-order",
-		"stylelint-config-rational-order/plugin"
-	],
+	"extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
+	"plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
 	"rules": {
-		"indentation": [
-			"tab"
-		],
-		"color-hex-case": "upper"
+		"indentation": ["tab"],
+		"color-hex-case": "upper",
+		"string-quotes": "single"
 	}
 }
