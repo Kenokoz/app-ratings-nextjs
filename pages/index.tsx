@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Button, Htag, Paragraph } from '../components';
+import { Button, Htag, Paragraph, Tag } from '../components';
 
 const Home: NextPage = () => {
 	return (
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
 				нагрузкой, так зачем загонять специалиста в душный офис. В этой профессии важным
 				считается вдохновение, поэтому дизайнеры ищут его в разных местах.
 			</Paragraph>
+			<Tag size="small" color="green">
+				Small
+			</Tag>
 		</>
 	);
 };
