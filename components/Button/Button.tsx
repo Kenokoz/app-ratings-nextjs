@@ -10,25 +10,23 @@ export const Button: FC<ButtonProps> = ({
 	children,
 	className,
 	...props
-}) => {
-	return (
-		<button
-			className={clsx(styles.button, className, {
-				[styles.primary]: appearance === 'primary',
-				[styles.ghost]: appearance === 'ghost',
-			})}
-			{...props}
-		>
-			{children}
-			{arrow !== 'none' && (
-				<span
-					className={clsx(styles.arrow, {
-						[styles.down]: arrow === 'down',
-					})}
-				>
-					<ArrowIcon />
-				</span>
-			)}
-		</button>
-	);
-};
+}) => (
+	<button
+		className={clsx(styles.button, className, {
+			[styles.primary]: appearance === 'primary',
+			[styles.ghost]: appearance === 'ghost',
+		})}
+		{...props}
+	>
+		{children}
+		{arrow !== 'none' && (
+			<span
+				className={clsx(styles.arrow, {
+					[styles.down]: arrow === 'down',
+				})}
+			>
+				<ArrowIcon />
+			</span>
+		)}
+	</button>
+);
