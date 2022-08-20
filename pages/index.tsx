@@ -29,11 +29,6 @@ const Home: NextPage<HomeProps> = ({ menu, firstCategory }) => {
 				Small
 			</Tag>
 			<Rating rating={rating} setRating={setRating} isEditable />
-			<ul>
-				{menu.map((item) => (
-					<li key={item._id.secondCategory}>{item._id.secondCategory}</li>
-				))}
-			</ul>
 		</>
 	);
 };
