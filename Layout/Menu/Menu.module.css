@@ -36,7 +36,12 @@
 	border-left: 1px solid #DFDFDF;
 }
 
+.secondLevelBlock {
+	display: none;
+}
+
 .secondLevelBlockOpen:last-child {
+	display: block;
 	margin-bottom: 20px;
 }
 

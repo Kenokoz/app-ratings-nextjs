@@ -1,4 +1,4 @@
-import { createContext, FC, PropsWithChildren, ReactNode, useState } from 'react';
+import { createContext, FC, PropsWithChildren, useState } from 'react';
 import { MenuItem } from '../interfaces/menu.interface';
 import { TopLevelCategory } from '../interfaces/page.interface';
 
