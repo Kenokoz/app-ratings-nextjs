@@ -5,19 +5,20 @@ import { MenuItem } from '../../interfaces/menu.interface';
 import { TopLevelCategory, TopPageModel } from '../../interfaces/page.interface';
 import { ProductModel } from '../../interfaces/product.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
+import { TopPageComponent } from '../../page-components';
 
-interface CourseProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
 	menu: MenuItem[];
 	firstCategory: TopLevelCategory;
 	page: TopPageModel;
 	products: ProductModel[];
 }
 
-const Course: NextPage<CourseProps> = ({ menu, page, products }) => {
-	return <>{products && products.length}</>;
+const TopPage: NextPage<TopPageProps> = ({ firstCategory, page, products }) => {
+	return <TopPageComponent firstCategory={firstCategory} page={page} products={products} />;
 };
 
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	let paths: string[] = [];
@@ -40,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	};
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<TopPageProps> = async ({ params }) => {
 	if (!params) {
 		return {
 			notFound: true,

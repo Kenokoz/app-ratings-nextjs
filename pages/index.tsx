@@ -5,7 +5,7 @@ import { Button, Htag, Paragraph, Tag, Rating } from '../components';
 import { withLayout } from '../Layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
 
-interface HomeProps extends Record<string, unknown> {
+interface HomeProps {
 	menu: MenuItem[];
 	firstCategory: number;
 }
