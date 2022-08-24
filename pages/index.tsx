@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { GetStaticProps, NextPage } from 'next';
 import axios from 'axios';
-import { Button, Htag, Paragraph, Tag, Rating } from '../components';
+import { Button, Htag, Paragraph, Tag, Rating, Input } from '../components';
 import { withLayout } from '../Layout/Layout';
 import { MenuItem } from '../interfaces/menu.interface';
 
@@ -29,6 +29,7 @@ const Home: NextPage<HomeProps> = ({ menu, firstCategory }) => {
 				Small
 			</Tag>
 			<Rating rating={rating} setRating={setRating} isEditable />
+			<Input placeholder="Name" />
 		</>
 	);
 };
